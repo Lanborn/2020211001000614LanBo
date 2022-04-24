@@ -12,7 +12,7 @@
                             border-color:black;
                             padding:0;
                             margin:0;" valign="bottom">
-     <img src="./logo.jpg" align="left">
+     <img src="logo.jpg" align="left">
      </td>
    </tr>
    <tr>
