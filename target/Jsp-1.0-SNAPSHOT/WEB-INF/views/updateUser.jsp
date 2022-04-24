@@ -1,4 +1,10 @@
-<%@ page import="com.lanborn.model.User" %>
+<%@ page import="com.lanborn.model.User" %><%--
+  Created by IntelliJ IDEA.
+  User: liu'teng
+  Date: 2022/4/20
+  Time: 23:17
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="header.jsp"%>
 <h1>User Update</h1>
