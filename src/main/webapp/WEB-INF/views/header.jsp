@@ -12,7 +12,7 @@
                             border-color:black;
                             padding:0;
                             margin:0;" valign="bottom">
-     <img src="logo.jpg" align="left">
+     <img src="https://github.com/Lanborn/School_Jsp/blob/49d38fda9dafa7dee862dcd3f95e8ba576a13a44/src/main/webapp/logo.jpg" align="left">
      </td>
    </tr>
    <tr>
