@@ -12,7 +12,7 @@
 </head>
 <body>
 <span>I am MyJsp.jsp</span>
-<h2>The action is "MyDearServletURL"</h2>
+<h2>The action is "MyDearJsp"</h2>
 <form method="post"  action="../MyDearJsp">
     name:<input type="text" name="name"><br/>
     class:<input type="text" name="class"><br/>
