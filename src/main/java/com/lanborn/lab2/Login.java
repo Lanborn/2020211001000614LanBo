@@ -1,6 +1,7 @@
 package com.lanborn.lab2;
 
 public class Login {
+
     private String username;
     private String password;
 

@@ -28,6 +28,7 @@ public class LoginFilter implements Filter {
             response.sendRedirect(request.getContextPath() + "/lab2/login.jsp");
         }
         chain.doFilter(request, response);
+
         System.out.println(" LoginFilter --> request after chain");
     }
 }

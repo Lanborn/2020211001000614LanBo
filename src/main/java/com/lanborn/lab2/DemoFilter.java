@@ -16,6 +16,7 @@ public class DemoFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
         System.out.println("Filter-->before chain");
         chain.doFilter(request, response);
+
         System.out.println("Filter-->after chain");
     }
 }
