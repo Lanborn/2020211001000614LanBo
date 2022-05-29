@@ -1,5 +1,6 @@
 package com.lanborn.controller;
 
+import com.lanborn.dao.IUserDao;
 import com.lanborn.dao.UserDao;
 import com.lanborn.model.User;
 

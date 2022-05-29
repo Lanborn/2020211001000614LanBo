@@ -13,6 +13,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="Jsp" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.12" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/Jsp-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
