@@ -1,8 +1,6 @@
 <%@include file="header.jsp" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page import="com.lanborn.model.User" %>
-<%@ page import="com.lanborn.model.Order" %>
-<%@ page import="com.lanborn.model.Payment" %>
 <section id="z`z`">
 	<div class="container">
 		<div class="step-one">
@@ -66,7 +64,7 @@
 								<tr>
 									<td>OID:${o.orderId}</td>
 									<td>${o.orderDate}</td>
-									<td><p>${o.firstName}${o.lastName}</p>
+									<td><p>${o.firstName} ${o.lastName}</p>
 										<p> ${o.address1}</p>
 										<p>${o.address2}</p>
 										<p>${o.city},${o.state},${o.country}-${o.postalCode}</p>
@@ -74,14 +72,14 @@
 									</td>
 									<td class="cart_total">
 										<%
-											Order o=(Order)pageContext.findAttribute("o");
+											com.lanborn.model.Order o=(com.lanborn.model.Order)pageContext.findAttribute("o");
 											int n=o.getPaymentId();
 											java.sql.Connection con=(java.sql.Connection)application.getAttribute("con");
-											String paymentType= Payment.findByPaymentId(con,n);
+											String paymentType=com.lanborn.model.Payment.findByPaymentId(con,n);
 										%>
 										<p class="cart_total_price"><%=paymentType %></p>
 									</td>
-									<td><button class="btn btn-default update" id="${o.orderId }">Details</button></td>
+									<td><button class="btn btn-default update" id="${o.orderId}">Details</button></td>
 
 								</tr>
 							</c:forEach>
@@ -101,10 +99,12 @@
 					</tbody>
 				</table>
 
+
 			</div>
 		</div>
-	</div>
 
+
+	</div>
 </section> <!--/#cart_items-->
 
 <div id="popup_box">    <!-- OUR PopupBox DIV-->
@@ -141,6 +141,7 @@ a{   cursor: pointer;   text-decoration:none;   }   /* This is for the positioni
 	$(document).ready(function() {
 		$('button').click(function() {
 			var t = $(this).attr('id');
+
 			$.ajax({
 				url : '<%=basePath%>orderDetails',
 				data : {
@@ -150,21 +151,25 @@ a{   cursor: pointer;   text-decoration:none;   }   /* This is for the positioni
 					loadPopupBox();
 					$('#container').html(responseText);
 					$("#container").dialog();
+
 				}
 			});//ajax
 		});//click
 		$('#popupBoxClose').click( function() {
 			unloadPopupBox();
 		});
+
 		$('#container').click( function() {
 			unloadPopupBox();
 		});
+
 		function unloadPopupBox() {    // TO Unload the Popupbox
 			$('#popup_box').fadeOut("slow");
 			$("#container").css({ // this is just for style
 				"opacity": "0.3"
 			});
 		}
+
 		function loadPopupBox() {    // To Load the Popupbox
 			$('#popup_box').fadeIn("slow");
 			$("#container").css({ // this is just for style
@@ -174,3 +179,5 @@ a{   cursor: pointer;   text-decoration:none;   }   /* This is for the positioni
 	});
 </script>
 <%@include file="footer.jsp" %>
+
+

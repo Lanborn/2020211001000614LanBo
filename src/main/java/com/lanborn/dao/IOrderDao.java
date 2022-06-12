@@ -1,12 +1,12 @@
 package com.lanborn.dao;
 
+import com.lanborn.model.Item;
+import com.lanborn.model.Order;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
-import com.lanborn.model.Item;
-import com.lanborn.model.Order;
 
 public interface IOrderDao {
 

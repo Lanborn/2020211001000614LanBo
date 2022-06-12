@@ -108,7 +108,7 @@
 												<img src="getImg?id=${c.product.productId}" alt="" style="height: 150px; width: 150px"></a>
 										</td>
 										<td class="cart_description">
-											<h4><a href="">${c.product.productName}</a></h4>
+											<h4><a href="">${c.product.productName} </a></h4>
 											<p>Web ID: ${c.product.productId} </p>
 										</td>
 										<td class="cart_price">
@@ -118,7 +118,7 @@
 											<p>${c.quantity}</p>
 										</td>
 										<td class="cart_total">
-											<p id="total" class="cart_total_price">${c.product.price*c.quantity}</p>
+											<p id="total" class="cart_total_price">${c.product.price}*${c.quantity}</p>
 										</td>
 										<td class="cart_delete">
 											<a class="cart_quantity_delete" href="<%=basePath%>cart?action=remove&productId=${c.product.productId}"><i class="fa fa-times"></i></a>
@@ -126,7 +126,6 @@
 									</tr>
 									<c:set var="cal" value="${cal+(c.product.price*c.quantity)}"/>
 								</c:forEach>
-
 								<!--loop_end-->
 							</c:otherwise>
 						</c:choose>
@@ -162,9 +161,8 @@
 			<div class="payment-options">
 				<!-- loop_start -->
 				<c:forEach var="pType" items="${paymentTypeList}">
-
 					<span>
-						<label><input name="paymentId" value="1" type="checkbox" varStatus="status"  value="${pType.paymentId}">${pType.paymentType} </label>
+						<label><input name="paymentId" type="checkbox" varStatus="status"  value="${pType.paymentId}">${pType.paymentType} </label>
 					</span>
 				</c:forEach>
 				<!-- loop_end -->
